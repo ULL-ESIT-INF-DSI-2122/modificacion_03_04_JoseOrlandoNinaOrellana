@@ -16,7 +16,13 @@ export class MergeSort implements Strategy
         return data;
     }
 
-    mergeSort(data: number[], l: number, r: number): void
+    /**
+     * mergeSort
+     * @param data Array a ordenar
+     * @param l Limite izquierda
+     * @param r Limite derecha
+     */
+    mergeSort(data: number[], l: number, r: number)
     {
         if(l >= r )
             return
@@ -27,7 +33,15 @@ export class MergeSort implements Strategy
         this.merge(data, l, m, r);
     }
 
-    merge(data: number[], l: number, m: number, r: number): void
+    /**
+     * merge
+     * Ordena un subarray
+     * @param data Array a ordenar
+     * @param l Limite izquierda
+     * @param m Medio
+     * @param r Limiete derecha
+     */
+    merge(data: number[], l: number, m: number, r: number)
     {
         let n1: number = m - l + 1;
         let n2: number = r - m;
